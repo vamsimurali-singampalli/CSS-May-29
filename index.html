@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform and Transitions</title>
+
+<style>
+
+
+.parent{
+    border: 1px solid black;
+    height:30vh;
+    width:20vw;
+    background-color: white;
+    padding-left: 50px;
+    padding-top: 50px;
+    margin:20px;
+}
+.cd1{
+    border: 1px solid white;
+    border-radius: 500px;
+    height:70%;
+    width:50%;
+    background-color: aliceblue;
+    margin: 10px;
+}
+#one:checked~.parent .cd1{
+    transform: rotate(810deg);
+    transition:all 4s linear;
+}
+#two:checked~.parent .cd1{
+    transform: rotate(810deg);
+    transition:all 2s linear;
+}
+#three:checked~.parent .cd1{
+    transform: rotate(810deg);
+    transition:all 1s ease-out;
+}
+
+
+</style>
+
+</head>
+<body><h3>Please refresh before increasing the speed.</h3>
+    <input type="radio" id="one" name="fan" value="one">Speed-1 <br>
+    <input type="radio" id="two" name="fan" value="two">Speed-2 <br>
+    <input type="radio" id="three" name="fan" value="three">Speed-3
+
+<br><br>
+<div class="parent">
+
+<div class="cd1"><img style="border-radius: 1000px;" src="./fan1.jpg" alt="fan" height="100%" width="100%"> </div>
+
+</div>
+
+</body>
+</html>

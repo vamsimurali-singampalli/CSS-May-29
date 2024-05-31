@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 80vh;
+            height: 80vh;
+            background-color: aqua;
+            perspective: 20px;
+        }
+        div{
+            width: 20vh;
+            height: 20vh;
+            background-color: goldenrod;
+        }
+        button:hover{
+            background-color: blue;
+            color: white;
+        }
+        #trans:active~section div{
+            transform: translate(40px,40px);
+        }
+        #rot:active~section div{
+            transform:rotateX(120deg);
+        }
+        #scale:active~section div{
+            transform:scale(4,4);
+        }
+        #skew:active~section div{
+            transform:skew(120deg);
+        }
+
+    </style>
+</head>
+<body>
+    <button id="trans">Translate</button>
+    <button id="rot">Rotate</button>
+    <button id="scale">Scale</button>
+    <button id="skew">Skew</button><br><br>
+    <section>
+        <div></div>
+    </section>
+</body>
+</html>
